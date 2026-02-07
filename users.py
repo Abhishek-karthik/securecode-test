@@ -28,4 +28,5 @@ class User:
         self.username = username
         # VULNERABILITY: Storing password in plain text
         self.password = password
-        self.api_key = "hardcoded-api-key-12345"  # VULNERABILITY: Hardcoded secret
+import os
+api_key = os.environ.get('API_KEY')
